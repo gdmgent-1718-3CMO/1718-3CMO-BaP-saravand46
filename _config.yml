@@ -19,7 +19,7 @@ defaults:
 #    scope:
 #      path: "style-guide"
     values:
-      layout: vertical
+      layout: horizontal
 
 exclude:
   - Gemfile
