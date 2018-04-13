@@ -25,13 +25,13 @@
   permalink: /typografie
   # fa-icon: icon-info
 
-  - name: Offline
+- name: Offline
   description: Offline
   folder: pages/offline/
   permalink: /offline
   # fa-icon: icon-info
 
-  - name: Online
+- name: Online
   description: Online
   folder: pages/online/
   permalink: /online

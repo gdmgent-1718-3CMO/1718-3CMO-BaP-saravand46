@@ -3,12 +3,53 @@
 */
 .navbar a {
     border: none;
+    color: #fff;
+    font-weight: 300;
+    &:hover {
+      color: #000;
 }
+    &:focus {
+      background-color: transparent;
+      color: $blauw;
+    }
+}
+
+.navbar-brand {
+  padding-right: 50px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding: 1rem 1.8rem;
+}
+
+.bg-light {
+  box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2)
+}
+
+.active > a {
+  font-weight: 700;
+  border-bottom: 3px solid #fff;
+}
+
+.navbar {
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+#download-pdf {
+  background-color: #FFF;
+  color: $oranje;
+  padding: 8px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2)
+}
+
 
 /* FOOTER
 ----------------------------------------------
 sticked to the bottom with small content pages
 */
+
 html {
     height: 100%;
   }
@@ -28,10 +69,10 @@ body {
 }
 
 footer {
-    background-color: $mycolor-2;
-    color: $color-white;
+    background-color: #000;
+    color: #000;
     a {
-        color: $color-white;
+        color: #000;
         &:hover {
             
         }
@@ -50,7 +91,7 @@ footer {
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color:$mycolor-3; /* Set a background color */
-  color: white; /* Text color */
+  color: #000; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   //padding: 15px; /* Some padding */
   width: 40px;
@@ -58,6 +99,92 @@ footer {
   border-radius: 20px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   &:hover {
-    background-color:$mycolor-5; 
+    background-color: $blauw; 
   }
+}
+
+.inleiding {
+  text-align: center;
+  color: #FFF;
+}
+
+.jumbotron {
+  margin-bottom: 120px;
+  border-radius: 0
+}
+
+/* HOME */
+#home-bg {
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, rgba(255,180,0,1), rgba(255,92,0,1));
+    height: 100vh;
+}
+
+#kleur-bg {
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, rgba(255,180,0,1), rgba(255,92,0,1));
+    height: 70vh;
+}
+
+/* KLEUR */
+
+
+#kleur-oranje > p {
+  padding: 20px;
+}
+
+#kleur-blauw {
+  background-color: $blauw;
+}
+
+#kleur-oranje {
+  background-color: $oranje;
+}
+
+#kleur-licht-oranje {
+  background-color: $licht-oranje;
+}
+
+#kleur-donker-oranje {
+  background-color: $donker-oranje;
+}
+
+#kleur-licht-blauw {
+  background-color: $licht-blauw;
+}
+
+#kleur-donker-blauw {
+  background-color: $donker-blauw;
+}
+
+#kleur-zwart {
+  background-color: #000;
+}
+
+#kleur-wit {
+  background-color: #FFF;
+}
+
+
+
+.card {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+
+.card-header {
+  min-height: 150px;
+  color: #FFF;
+}
+
+#seckleur-bg {
+  background-color: #f5f5f5;
+}
+
+.primaire-kleur-swatch {
+  margin: 35px 0 100px;
 }

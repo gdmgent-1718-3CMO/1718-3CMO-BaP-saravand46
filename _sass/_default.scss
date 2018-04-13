@@ -5,7 +5,7 @@ body {
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     line-height: $lineheight-base;
-    background-color: $body-bg;
+    background-color: #fff;
     color: $body-color;
 }
 
@@ -17,7 +17,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-weight: $font-weight-light;
     font-size: 4rem;
-    color: $color-grey-2;
+    color: #FFF;
+    text-align: center;
+    padding: 150px 0 20px;
+    font-weight: $font-weight-bold;
 }
 h2 {
     font-weight: $font-weight-light;
@@ -45,7 +48,7 @@ a {
 }
 blockquote {
     padding-left: 24px;
-    border-left: 2px solid $mycolor-5;
+    border-left: 2px solid $oranje;
 }
 
 // ongeordende lijstjes met een ander symbool of kleur
@@ -58,7 +61,7 @@ main ul {
     text-indent: -25px;
     &:before {
         content:'\2022';
-        color: $mycolor-5;
+        color: $oranje;
         margin-right: 18px;
     }    
   }
@@ -80,8 +83,8 @@ main ol {
         padding: 3px 6px;
         margin-right: 5px;
         border-radius: 5px;
-        background-color: $mycolor-5;
-        color: $color-white;
+        background-color: $oranje;
+        color: $oranje;
         font-family: $myfont-family-title;
         font-weight: $font-weight-bold;
       }    
