@@ -1,25 +1,26 @@
 // default-styling
 
 body {
-    font-family: $myfont-family-base;
+    font-family: $font-family-base;
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     line-height: $lineheight-base;
-    background-color: #fff;
+    background-color: $wit;
     color: $body-color;
+    padding-bottom: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $myfont-family-title;
+    font-family: $font-family-title;
     font-weight: $font-weight-bold;
 }
 
 h1 {
     font-weight: $font-weight-light;
     font-size: 4rem;
-    color: #FFF;
+    color: $wit;
     text-align: center;
-    padding: 150px 0 20px;
+    padding: 100px 0 20px;
     font-weight: $font-weight-bold;
 }
 h2 {
@@ -33,16 +34,16 @@ h3, h4, h5, h6 {
 }
 a {
     text-decoration: none;
-    color: $body-link;
-    border-bottom: dotted 1px $body-link;
+    color: $blauw;
+    border-bottom: dotted 1px $blauw;
     &:hover{
-        color: $body-link;
+        color: $oranje;
         text-decoration: none;
-        border-bottom: solid 1px $body-link;
+        border-bottom: solid 1px $oranje;
     }
     &:active{
-        background-color: $body-link;
-        color: $color-white;
+        background-color: transparent;
+        color: $zwart;
     }
     &:focus{}
 }
@@ -74,22 +75,23 @@ main ol {
     padding: 0;
     counter-reset: i 0;
     li {
-      padding-left: 25px;
-      text-indent: -25px;
-      margin-bottom: 0.5rem;
+         margin-bottom: 0.5rem;
+         margin-left: 50px;
+         list-style-position: inside;
+         text-indent: -26px; // afhankelijk van margin-right
+      
       &:before {
         counter-increment: i;
         content: counter(i);    
-        padding: 3px 6px;
-        margin-right: 5px;
-        border-radius: 5px;
-        background-color: $oranje;
+        margin-right: 18px; // afstand cijfer en tekst
         color: $oranje;
-        font-family: $myfont-family-title;
-        font-weight: $font-weight-bold;
+        font-family: $font-family-title;
+        font-weight: $font-weight-semibold;
       }    
     }
   }
+
+
 
 //forms 
 button, a.btn {
@@ -100,4 +102,51 @@ button, a.btn {
 }
 input[type=text], textarea {
 
+}
+
+// width container
+@media (min-width: 1200px) {
+    .container {
+      width: 1030px;
+    }
+  }
+
+// table
+
+.table thead th {
+  border-bottom: 0;
+}
+
+.table td, .table th:not(.table-title) {
+    border-top: 1px dotted $wit;
+}
+
+.table-title, .geen-border {
+    border-top: 0 !important;
+}
+
+.table td, .table th {
+    padding: 0.75rem 0;
+}
+
+.table-links {
+    padding-right: 30px;
+}
+
+.table-rechts {
+    padding-left: 30px;
+}
+
+th {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $oranje;
+}
+
+// hr
+
+hr{
+    border-top: 1px solid rgba(255,255,255,.5);
+    margin: 50px 0;
 }

@@ -3,7 +3,7 @@
 */
 .navbar a {
     border: none;
-    color: #fff;
+    color: $wit;
     font-weight: 300;
     &:hover {
       color: #000;
@@ -19,7 +19,7 @@
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  padding: 1rem 1.8rem;
+  padding: 0.5rem 1.3rem;
 }
 
 .bg-light {
@@ -28,7 +28,7 @@
 
 .active > a {
   font-weight: 700;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid $wit;
 }
 
 .navbar {
@@ -39,15 +39,15 @@
 #download-pdf {
   background-color: #FFF;
   color: $oranje;
-  padding: 8px 30px;
+  padding: 6px 25px;
   border-radius: 20px;
-  box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2)
+  box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2);
+  font-size: $font-size-base;
 }
 
 
 /* FOOTER
 ----------------------------------------------
-sticked to the bottom with small content pages
 */
 
 html {
@@ -68,52 +68,53 @@ body {
   left: 0;
 }
 
+
 footer {
-    background-color: #000;
-    color: #000;
+    background-color: $oranje;
+    color: $wit;
+    padding: 70px;
     a {
-        color: #000;
+        color: $zwart;
         &:hover {
             
         }
     }
 }
 
-/* BACK TO TOP
--------------------------
-*/
-#to-top {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color:$mycolor-3; /* Set a background color */
-  color: #000; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  //padding: 15px; /* Some padding */
-  width: 40px;
-  height: 40px;
-  border-radius: 20px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-  &:hover {
-    background-color: $blauw; 
-  }
+.footer-titel {
+  text-transform: uppercase;
+  font-weight: $font-weight-semibold;
+  border-bottom: 1px dotted $wit;
+  display: table-cell;
 }
 
+.footer-titel:after {
+  content: "";
+  display: table-cell;
+  width: 100%;
+}
+
+.footer-onderdeel p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* HEADER */
 .inleiding {
   text-align: center;
-  color: #FFF;
+  color: $wit;
+  font-size: 16px;
 }
 
 .jumbotron {
-  margin-bottom: 120px;
-  border-radius: 0
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 95px 2rem;
 }
 
-/* HOME */
+/* HOME
+----------------------------------------------
+*/
 #home-bg {
     background-position: 0% 25%;
     background-size: cover;
@@ -126,17 +127,18 @@ footer {
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(to right, rgba(255,180,0,1), rgba(255,92,0,1));
+    /* background-image: url($baseurl + "/assets/images/patroon-header.png"); */
+    background-image: url("images/patroon-header2.png");
     height: 70vh;
+    background-attachment: fixed;
 }
 
-/* KLEUR */
 
 
-#kleur-oranje > p {
-  padding: 20px;
-}
 
+
+/* KLEUR ------------------------------------------------------------------------ */
+/* Stalen benoemen ------ */
 #kleur-blauw {
   background-color: $blauw;
 }
@@ -162,29 +164,107 @@ footer {
 }
 
 #kleur-zwart {
-  background-color: #000;
+  background-color: $zwart;
 }
 
 #kleur-wit {
-  background-color: #FFF;
+  background-color: $wit;
+}
+
+#kleur-oranjeverloop {
+  background: linear-gradient(rgba(255,180,0,1), rgba(255,92,0,1));
+  width: 200px;
+  margin-right: 1.25rem;
+}
+
+#kleur-blauwverloop {
+  background: linear-gradient(rgba(172,221,255,1), rgba(0,153,255,1));
+  width: 200px;
+  margin-right: 1.25rem;
 }
 
 
 
+/* Card ------ */
 .card {
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   border: 0;
+  border-radius: 0;
 }
 
 .card-header {
-  min-height: 150px;
-  color: #FFF;
+  min-height: 120px;
+  color: $wit;
+  border-bottom: 0;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
-#seckleur-bg {
-  background-color: #f5f5f5;
+.card-margin-top {
+  padding-top: 0;
 }
 
-.primaire-kleur-swatch {
-  margin: 35px 0 100px;
+.card-header:first-child {
+  border-radius: 0;
+}
+
+.card-text {
+  color: $donker-grijs;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  margin-bottom: 0;
+}
+
+.card-margin {
+  margin-top: 35px;
+}
+
+.card-subtitle {
+  font-weight: 200;
+}
+
+.card-link {
+  margin-left: 35px;
+}
+
+
+
+
+
+span.font-weight-bold {
+  padding-right: 5px; 
+} // anders doen!
+
+#kleurenpalet-kader {
+  padding: 0 20px 20px;
+}
+
+.oplijsting-kleurenpalet li {
+  margin-left: 15px;
+}
+
+
+
+/* ALGEMEEN */
+.grijs-sectie {
+  background-color: $licht-grijs;
+}
+
+.wit-sectie {
+  background-color: $wit;
+}
+
+
+.dos-donts {
+  background-color: $achtergrond-grijs;
+  margin-bottom: 0;
+}
+
+.tekst-rechterkant {
+  padding-left: 50px;
+}
+
+.tekst-linkerkant {
+  padding-right: 50px;
 }
