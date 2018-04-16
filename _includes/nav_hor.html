@@ -1,6 +1,10 @@
 <nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ site.baseurl }}/index">LiSA</a> <!-- ipv lisa een img -->
+        <a class="navbar-brand" href="{{ site.baseurl }}/index">
+            <img src="{{ '/images/logo/logo-mono-wit-woordmerk.png' | relative_url }}">
+        </a>
+
+        <!-- Hamburger -->
         <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>-->
@@ -12,6 +16,7 @@
         
             {%- capture item_classes %}{% if page.url contains nav-item.permalink %}active{% endif %}{% endcapture %}
             {%- if nav-item.folder %}
+
             <!-- MET TOGGLE -->
             <!--<li class="nav-item dropdown {{ item_classes }}">
                         <a class="nav-link dropdown-toggle" href="{{ nav-item.permalink | relative_url }}" id="navbarDropdown" title="{{ nav-item.name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -22,18 +27,19 @@
 
             <!-- ZONDER TOGGLE -->
                 <li class="nav-item {{ item_classes }}">
-                    <a class="nav-link" href="{{ nav-item.permalink | relative_url }}" title="{{ nav-item.name }}">
+                    <a class="nav-link text-center" href="{{ nav-item.permalink | relative_url }}" title="{{ nav-item.name }}">
                         {{ nav-item.name }}
                     </a>
-                    {%- include navigation-from-folder.html nav-item=nav-item %}
+                    {%- include navigation-from-folder.html nav-item=nav-item%}
                 </li>
 
             {%- else %}
-            <li class="nav-item {{ item_classes }}">
+            <!-- verwijdert 'home' -->
+           <!--  <li class="nav-item {{ item_classes }}">
                     <a class="nav-link" href="{{ nav-item.permalink | relative_url }}" title="{{ nav-item.name }}">
                         {{ nav-item.name }}
                     </a>
-            </li>
+            </li>-->
             {%- endif %}
 
         {%- endfor %}
@@ -45,3 +51,5 @@
         </div>
     </div><!-- /div.container -->
 </nav>
+
+

@@ -5,34 +5,28 @@
   description: Home
   # folder: pages/
   permalink: /index 
-  # fa-icon: icon-info
 
 - name: Logo
   description: Logo
   folder: pages/logo/
   permalink: logo/
-  # fa-icon: icon-graduation-cap
 
 - name: Kleur
   description: Kleur
   folder: pages/kleur/
   permalink: kleur/
-  # fa-icon: icon-info
 
 - name: Typografie
   description: Typografie
   folder: pages/typografie/
   permalink: /typografie
-  # fa-icon: icon-info
 
-- name: Offline
-  description: Offline
-  folder: pages/offline/
-  permalink: /offline
-  # fa-icon: icon-info
+- name: Druk
+  description: Druk
+  folder: pages/druk/
+  permalink: /druk
 
-- name: Online
-  description: Online
-  folder: pages/online/
-  permalink: /online
-  # fa-icon: icon-info
+- name: Digitaal
+  description: Digitaal
+  folder: pages/digitaal/
+  permalink: /digitaal

@@ -1,29 +1,44 @@
-/* Navigation
+/* NAVIGATION
 ---------------------------------------------
 */
+
 .navbar a {
     border: none;
     color: $wit;
     font-weight: 300;
+    transition: 0.3s;
     &:hover {
-      color: #000;
+      font-weight: 600;
 }
     &:focus {
       background-color: transparent;
-      color: $blauw;
+      color: $donker-oranje;
+    }
+    &:after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
     }
 }
 
 .navbar-brand {
   padding-right: 50px;
+  padding-left: 40px;
+}
+
+.navbar-brand img {
+  width: 70px;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  padding: 0.5rem 1.3rem;
+  padding: 0.5rem 1.2rem;
 }
 
 .bg-light {
-  box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2)
+  box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.1)
 }
 
 .active > a {
@@ -37,13 +52,21 @@
 }
 
 #download-pdf {
-  background-color: #FFF;
-  color: $oranje;
+  background-color: $blauw;
+  color: $wit;
   padding: 6px 25px;
   border-radius: 20px;
-  box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.1);
   font-size: $font-size-base;
+  &:hover {
+    font-weight: 300;
+    background-color: $donker-oranje;
+    color: $wit;
+  }
 }
+
+
+
 
 
 /* FOOTER
@@ -61,22 +84,16 @@ body {
     min-height: 100%;
   }
 
-.bh-absolute-bottom {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-
 footer {
     background-color: $oranje;
     color: $wit;
     padding: 70px;
-    a {
-        color: $zwart;
+    a.footer-link {
+        color: $wit;
+        border-bottom: 0;
         &:hover {
-            
+            border-bottom: 1px dotted $wit;
+            color: $wit;
         }
     }
 }
@@ -99,7 +116,40 @@ footer {
   margin-bottom: 0;
 }
 
-/* HEADER */
+.icon-footer {
+  margin-left: -25px;
+}
+
+#logo-footer-artevelde img {
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 60%;
+}
+
+#logo-footer-lisa img {
+  width: 90%;
+}
+
+#btn-footer {
+  background-color: $wit;
+  color: $donker-oranje;
+  &:hover {
+    background-color: $donker-oranje;
+    color: $wit;
+  }
+  &:active {
+    background-color: $blauw;
+  }
+}
+
+
+
+
+
+/* HEADER
+----------------------------------------------
+*/
+
 .inleiding {
   text-align: center;
   color: $wit;
@@ -112,32 +162,120 @@ footer {
   padding: 95px 2rem;
 }
 
-/* HOME
-----------------------------------------------
-*/
+.header {
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  background-attachment: fixed;
+}
 #home-bg {
-    background-position: 0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background: linear-gradient(to right, rgba(255,180,0,1), rgba(255,92,0,1));
+    background-image: url("../images/header-index.jpg");
     height: 100vh;
 }
 
 #kleur-bg {
-    background-position: 0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-image: url($baseurl + "/assets/images/patroon-header.png"); */
-    background-image: url("images/patroon-header2.png");
-    height: 70vh;
-    background-attachment: fixed;
+    background-image: url("../images/header-kleuren.png");
+}
+
+#logo-bg {
+    background-image: url("../images/header-logo.png");
 }
 
 
 
 
 
-/* KLEUR ------------------------------------------------------------------------ */
+/* PAGES --------------------------------------------------------------- */
+
+/* HOME
+----------------------------------------------
+*/
+
+#creative-cloud-tekst {
+  border-right: 1px solid #333;
+  padding-right: 80px;
+}
+
+#ms-office-tekst {
+  padding-left: 80px;
+}
+
+.btn-tooltip {
+  font-size: 14px;
+  padding: 0;
+  line-height: 1rem;
+  border-bottom: dotted 1px $zwart;
+}
+
+
+
+
+
+/* LOGO
+----------------------------------------------
+*/
+
+img#img-woordmerk {
+  width: 50%;
+  padding-right: 55px;
+}
+
+img#img-beeldmerk {
+  width: 40%;
+  padding-left: 70px;
+}
+
+#do-kolom {
+  padding-right: 40px;
+}
+
+#donts-kolom, #donts-titel-logo {
+  padding-left: 40px;
+}
+
+.voorbeeld-logo-download img {
+  padding-right: 10px;
+}
+
+hr.hr-kader {
+  margin: 30px 0 30px;
+}
+
+hr#hr-logo {
+  margin: 80px 0;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: 0;
+}
+
+#kleur-kader + .card-body {
+  padding-bottom: 0;
+}
+
+.th-logo, .td-logo {
+  font-size: 14px;
+  text-transform: initial
+}
+
+th.th-logo {
+  padding-right: 15px;
+}
+
+#logo-downloaden-uitleg {
+  padding-bottom: 30px;
+}
+
+
+
+
+
+/* KLEUR
+----------------------------------------------
+*/
+
 /* Stalen benoemen ------ */
 #kleur-blauw {
   background-color: $blauw;
@@ -183,8 +321,6 @@ footer {
   margin-right: 1.25rem;
 }
 
-
-
 /* Card ------ */
 .card {
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
@@ -217,7 +353,7 @@ footer {
 }
 
 .card-margin {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .card-subtitle {
@@ -228,25 +364,25 @@ footer {
   margin-left: 35px;
 }
 
-
-
-
-
-span.font-weight-bold {
+span.kleurcode {
   padding-right: 5px; 
-} // anders doen!
+}
 
-#kleurenpalet-kader {
+#kleurenpalet-kader, #basismateriaal-kader, #monotoon-kader, #kleur-kader {
   padding: 0 20px 20px;
 }
 
-.oplijsting-kleurenpalet li {
+.oplijsting li {
   margin-left: 15px;
 }
 
 
 
-/* ALGEMEEN */
+
+
+/* ALGEMEEN
+----------------------------------------------
+*/
 .grijs-sectie {
   background-color: $licht-grijs;
 }
@@ -254,7 +390,6 @@ span.font-weight-bold {
 .wit-sectie {
   background-color: $wit;
 }
-
 
 .dos-donts {
   background-color: $achtergrond-grijs;
@@ -267,4 +402,35 @@ span.font-weight-bold {
 
 .tekst-linkerkant {
   padding-right: 50px;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.lijn-linkerkant {
+  border-right: 1px solid #E3E3E3;
+  padding-right: 80px;
+}
+
+.lijn-rechterkant {
+  padding-left: 80px;
+}
+
+.fa-download {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.fa-times, .fa-check {
+  margin-right: 10px;
+}
+
+.fa-exclamation-triangle {
+  color: $donker-oranje;
+  margin-left: -25px;
+}
+
+.let-op {
+  margin-left: 11px;
 }

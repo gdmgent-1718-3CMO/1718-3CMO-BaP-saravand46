@@ -26,26 +26,38 @@ h1 {
 h2 {
     font-weight: $font-weight-light;
     font-size: 2rem;
-    margin: 2rem 0 1rem;
+    margin: 0 0 1rem;
 }
 h3, h4, h5, h6 {
     font-size: 1rem;
     margin: 2rem 0 0;
 }
+
+h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #ff9900;
+    padding-bottom: 30px;
+}
+
 a {
     text-decoration: none;
     color: $blauw;
     border-bottom: dotted 1px $blauw;
+    transition: 0.1s;
     &:hover{
         color: $oranje;
         text-decoration: none;
-        border-bottom: solid 1px $oranje;
+        border-bottom: 0;
     }
     &:active{
         background-color: transparent;
         color: $zwart;
     }
-    &:focus{}
+    &:focus{
+        color: $donker-oranje;
+    }
 }
 blockquote {
     padding-left: 24px;
@@ -94,12 +106,27 @@ main ol {
 
 
 //forms 
-button, a.btn {
-    
-    &:hover{}
-    &:active{}
-    &:focus{}
-}
+
+.button, a.btn {
+    background-color: $blauw;
+    color: $wit;
+    padding: 6px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s;
+    border-bottom: 0;
+    &:hover {
+      background-color: $oranje;
+    }
+    &:active {
+      background-color: $donker-oranje;
+    }
+    &:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+  }
+
 input[type=text], textarea {
 
 }
@@ -144,9 +171,6 @@ th {
     color: $oranje;
 }
 
-// hr
-
-hr{
-    border-top: 1px solid rgba(255,255,255,.5);
-    margin: 50px 0;
-}
+img {
+    width: 100%;
+  }
