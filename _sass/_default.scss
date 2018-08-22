@@ -16,12 +16,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-weight: $font-weight-light;
     font-size: 4rem;
     color: $wit;
     text-align: center;
     padding: 100px 0 20px;
     font-weight: $font-weight-bold;
+    font-family: Nunito;
 }
 h2 {
     font-weight: $font-weight-light;
@@ -168,7 +168,6 @@ th {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.2rem;
-    color: $oranje;
 }
 
 img {

@@ -19,7 +19,7 @@ $(document).ready(function(){
 
            $("#download-pdf").css('color', '#fff');
            $(".active > a").css('color', 'rgba(255,153,0,1)');
-           $('.navbar .navbar-brand img').attr('src','/1718-3CMO-BaP-saravand46/assets/images/logo-woordmerk.png')
+           $('.navbar .navbar-brand img').attr('src','/1718-3CMO-BaP-saravand46/assets/images/logo-standaard.png')
 
 
            
@@ -29,7 +29,7 @@ $(document).ready(function(){
            $(".navbar a").css('color', '#fff');
            $("#download-pdf").css('background-color', 'rgba(0,153,255,1)'); // blauw
            $("#download-pdf").css('color', '#fff');
-           $('.navbar .navbar-brand img').attr('src','/1718-3CMO-BaP-saravand46/assets/images/logo-mono-wit-woordmerk.png')
+           $('.navbar .navbar-brand img').attr('src','/1718-3CMO-BaP-saravand46/assets/images/logo-wit.png')
         }
     });
      }

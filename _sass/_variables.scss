@@ -28,17 +28,7 @@ $oranje: rgba(255,153,0,1);
 $blauw: rgba(0,153,255,1);
 
 //Secundair
-$licht-oranje: rgba(252,242,206,1);
 $donker-oranje: rgba(240,102,28,1);
-$licht-blauw: rgba(216,235,255,1);
-$donker-blauw: rgba(42,74,170,1);
-
-/*
-$donker-blauw: rgba(42,64,255,1);
-$donker-oranje: rgba(255,77,0,1);
-$licht-oranje: rgba(255,242,191,1);
-$licht-blauw: rgba(204,242,255,1);
-*/
 
 //Basis
 $wit: rgba(255,255,255,1);
@@ -55,7 +45,7 @@ $achtergrond-grijs: rgba(50,50,50,1);
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 // Client specific
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,800|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 // type
 $font-family-base: 'Raleway', serif;

@@ -68,6 +68,16 @@
 
 
 
+/* FONT
+----------------------------------------------
+*/
+
+#font-nunito {
+  font-family: Nunito !important;
+}
+
+
+
 
 /* FOOTER
 ----------------------------------------------
@@ -85,7 +95,7 @@ body {
   }
 
 footer {
-    background-color: $oranje;
+    background-color: $achtergrond-grijs;
     color: $wit;
     padding: 70px;
     a.footer-link {
@@ -121,8 +131,9 @@ footer {
 }
 
 #logo-footer-artevelde img {
-  padding-top: 10px;
-  padding-left: 25px;
+  padding-top: 30px;
+  padding-left: 15px;
+  margin-left: 10px;
   width: 60%;
 }
 
@@ -131,11 +142,10 @@ footer {
 }
 
 #btn-footer {
-  background-color: $wit;
-  color: $donker-oranje;
+  background-color: $oranje;
+  color: $wit;
   &:hover {
-    background-color: $donker-oranje;
-    color: $wit;
+    background-color: $blauw;
   }
   &:active {
     background-color: $blauw;
@@ -159,27 +169,23 @@ footer {
 .jumbotron {
   border-radius: 0;
   margin-bottom: 0;
-  padding: 95px 2rem;
 }
 
 .header {
   background-position: 0% 25%;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 70vh;
   background-attachment: fixed;
+  height: 50vh;
+  background-color: $oranje;
+  background-image: url("../images/header.png");
 }
 #home-bg {
-    background-image: url("../images/header-index.jpg");
-    height: 100vh;
-}
-
-#kleur-bg {
-    background-image: url("../images/header-kleuren.png");
-}
-
-#logo-bg {
-    background-image: url("../images/header-logo.png");
+    background-image: url("../images/header-index.png");
+    height: 200%;
+    padding-bottom: 13rem;
+    margin-bottom: -80px;
+    background-attachment: scroll;
 }
 
 
@@ -208,6 +214,10 @@ footer {
   border-bottom: dotted 1px $zwart;
 }
 
+.jumbotron {
+  padding-top: 90px;
+  padding-bottom: 90px;
+} 
 
 
 
@@ -268,6 +278,9 @@ th.th-logo {
   padding-bottom: 30px;
 }
 
+#bg-donker {
+  background-color: $achtergrond-grijs;
+}
 
 
 
@@ -283,22 +296,6 @@ th.th-logo {
 
 #kleur-oranje {
   background-color: $oranje;
-}
-
-#kleur-licht-oranje {
-  background-color: $licht-oranje;
-}
-
-#kleur-donker-oranje {
-  background-color: $donker-oranje;
-}
-
-#kleur-licht-blauw {
-  background-color: $licht-blauw;
-}
-
-#kleur-donker-blauw {
-  background-color: $donker-blauw;
 }
 
 #kleur-zwart {
@@ -368,7 +365,7 @@ span.kleurcode {
   padding-right: 5px; 
 }
 
-#kleurenpalet-kader, #basismateriaal-kader, #monotoon-kader, #kleur-kader {
+#kleurenpalet-kader, #basismateriaal-kader, #monotoon-kader, #kleur-kader, #font-kader {
   padding: 0 20px 20px;
 }
 
@@ -392,9 +389,11 @@ span.kleurcode {
 }
 
 .dos-donts {
-  background-color: $achtergrond-grijs;
+  background-color: $oranje;
   margin-bottom: 0;
 }
+
+
 
 .tekst-rechterkant {
   padding-left: 50px;
@@ -433,4 +432,9 @@ span.kleurcode {
 
 .let-op {
   margin-left: 11px;
+}
+
+.transparant{
+  background-color: rgba(0, 0, 0, 0.0);
+  padding-bottom: 120px;
 }
