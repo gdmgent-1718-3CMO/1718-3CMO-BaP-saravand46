@@ -173,3 +173,29 @@ th {
 img {
     width: 100%;
   }
+
+
+
+
+ //carousel 
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 25px;
+  color: $color-grey-2;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 25px;
+  color: $color-grey-2;
+}
+
+a.carousel-control-prev, a.carousel-control-next {
+    border-bottom: none;
+}
